@@ -10,13 +10,13 @@ class Produto(db.Model):
 
     id = Column(BigInteger, primary_key=True)
     nome = Column(String(128), nullable=False)
-    quantidade = Column(Integer, nullable=False, default=0)
-    preco = Column(Numeric(10, 2), nullable=False, default=0.00)
+    quantidade = Column(Integer, nullable=False, server_default="0")
+    preco = Column(Numeric(10, 2), nullable=False, server_default="0.0")
 
-    criado_em = Column(DateTime, default=current_timestamp())
+    criado_em = Column(DateTime, server_default=current_timestamp())
     modificado_em = Column(
         DateTime,
-        default=current_timestamp(),
+        server_default=current_timestamp(),
         onupdate=current_timestamp())
 
     def __init__(self, nome: str = "", quantidade: int = 0, preco: float = 0.0) -> None:
