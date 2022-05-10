@@ -55,9 +55,9 @@ class ProdutoController:
     def update(id):
 
         produto = Produto.query.get(id)
-        dados = request.get_json().get('produto')
+        dados = request.get_json().get('produtos')
 
-        produto_schema = ProdutoSchema(only=['id', 'nome', 'preco', 'quantidade'])
+        produto_schema = ProdutoSchema()
 
         if dados.get('nome'):
             produto.nome = dados['nome']
