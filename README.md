@@ -15,6 +15,22 @@
 - [PyMySQL](https://pypi.org/project/PyMySQL/)
 - [Flask Marshmallow](https://flask-marshmallow.readthedocs.io/en/latest/)
 
+```
+pip install -U Flask
+
+pip install -U Flask-SQLAlchemy
+
+python3 -m pip install PyMySQL
+
+pip install flask-marshmallow
+
+pip install marshmallow-sqlalchemy
+
+pip install cryptography
+
+pip install flask_cors
+```
+
 # Organizando o Projeto
 
 Quando você está trabalhando em um projeto um pouco mais complexo, um único módulo pode ficar confuso. Você precisará definir classes para modelos e formulários, e eles serão misturados com o código para suas rotas e configuração. Tudo isso pode frustrar o desenvolvimento. Para resolver esse problema, podemos decompor os diferentes componentes do nosso aplicativo em um grupo de módulos interconectados, ou seja, um pacote.
@@ -40,3 +56,4 @@ app/
 | /models | É aqui que você define os modelos de seu aplicativo. Ele gerencia diretamente os dados, a lógica e as regras de negócio da aplicação. |
 | /controllers | O controlador responde à entrada do usuário e realiza interações nos objetos do modelo de dados. O controlador recebe a entrada, valida-a opcionalmente e depois passa a entrada para o modelo. |
 | /db |  |
+
