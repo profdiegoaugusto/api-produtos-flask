@@ -31,3 +31,14 @@ class Produto(db.Model):
 
     def __repr__(self):
         return f'<Produto: {self.nome}>'
+    
+class ProdutoSchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        model = Produto
+        sqla_session = db.session
+        load_instance = True
+
+    id = ma.auto_field()
+    nome = ma.auto_field()
+    preco = ma.auto_field()
+    quantidade = ma.auto_field()
