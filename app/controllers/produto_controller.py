@@ -1,8 +1,8 @@
 from flask import Blueprint, make_response, jsonify, request
 
 from app import db
-from app.models.produto import Produto
-from app.models.produto_schema import ProdutoSchema
+from app.models.produto import Produto, ProdutoSchema
+
 
 
 class ProdutoController:
