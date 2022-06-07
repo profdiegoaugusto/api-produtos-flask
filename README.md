@@ -16,19 +16,8 @@
 - [Flask Marshmallow](https://flask-marshmallow.readthedocs.io/en/latest/)
 
 ```
-pip install -U Flask
+pip3 install -r requirements.txt
 
-pip install -U Flask-SQLAlchemy
-
-python3 -m pip install PyMySQL
-
-pip install flask-marshmallow
-
-pip install marshmallow-sqlalchemy
-
-pip install cryptography
-
-pip install flask_cors
 ```
 
 # Organizando o Projeto
